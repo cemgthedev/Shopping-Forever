@@ -1,9 +1,12 @@
+import { Menu } from './components/Menu';
 import './styles/global.css'
 
 export function App() {
 
   return (
-    <h1 className='text-red-500 text-2xl'>Bora codar nossa loja virtual</h1>
+    <div className='flex justify-center pt-8'>
+      <Menu name='Option' />
+    </div>
   );
 
 }
