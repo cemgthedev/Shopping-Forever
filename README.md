@@ -1,2 +1,2 @@
 # Shopping-Forever
-Projeto de uma loja online
+Uma aplicação web de loja online
