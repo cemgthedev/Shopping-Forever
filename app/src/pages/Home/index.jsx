@@ -4,8 +4,11 @@ import { Footer } from '../../components/Footer';
 import '../../styles/global.css'
 
 const options = [
-  {href:'/', label:'Home'},
-  {href:'/categories', label:'Categories'},
+  {href:'/', label:'Home', links:null},
+  {href:'/categories', label:'Categories', links:[
+    {href:'/A', label:'A'},
+    {href:'/B', label:'B'}
+  ]},
   {href:'/coupons', label:'Coupons'},
   {href:'/sponsors', label:'Sponsors'},
   {href:'/feedbacks', label:'Feedbacks'},
