@@ -24,17 +24,19 @@ export function Option({ option }) {
                              text-white
                                p-2
                                hover:shadow-menu
-                               relative
-                               '
+                               relative'
                 >
                     <Menu.Button>
                         { option.label }
                     </Menu.Button>
                     <Menu.Items
-                        className='bg-slate-50
+                        className='bg-white
                                    text-black
+                                   ring-1
+                                   ring-black
                                    absolute
                                    top-12
+                                   right-2
                                    flex
                                    flex-col
                                    gap-2
@@ -45,16 +47,16 @@ export function Option({ option }) {
                             option.links.map((link) => (
                                 <Menu.Item
                                     className='p-2 rounded-md'
-                                    key={link.href}
+                                    key={link}
                                     as={Fragment}
                                 >
                                     {
                                         ({active}) => (
                                             <a 
                                                 className={`${active && 'bg-cyan-500'}`}
-                                                href={link.href}
+                                                href={`/${link}`}
                                             >
-                                                {link.label}
+                                                {link}
                                             </a>
                                         )
                                     }

@@ -9,7 +9,7 @@ const links = [
 
 export function Header({ options }) {
     return (
-        <div>
+        <div className="w-screen">
             <header 
                 className="bg-black 
                             text-white
@@ -32,7 +32,7 @@ export function Header({ options }) {
                 >
                     {
                         options.map(option => (
-                            <Option option={ option } />
+                            <Option key={option.href} option={ option } />
                         ))
                     }
                 </div>
@@ -44,7 +44,7 @@ export function Header({ options }) {
                 >
                     {
                         links.map(link => (
-                            <Option option={ link } />
+                            <Option key={link.href} option={ link } />
                         ))
                     }
                 </div>
@@ -52,7 +52,7 @@ export function Header({ options }) {
             <img 
                 src="/banner.jpg" 
                 alt="" 
-                className="w-full 
+                className="w-screen 
                            h-[200px]
                            shadow-md"
             />
